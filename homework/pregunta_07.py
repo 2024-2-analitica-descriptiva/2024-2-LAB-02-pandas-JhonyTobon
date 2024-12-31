@@ -11,7 +11,7 @@ def pregunta_07():
     df = pd.read_csv('files/input/tbl0.tsv', sep = '\t')
     #Calcular la suma de los valores de c2 que aparecen con su correspondiente letra en c1
     sum_c2_by_c1 = df.groupby ('c1')['c2'].sum()
-    sum_c2_by_c1
+    return sum_c2_by_c1
     """
     Calcule la suma de la `c2` por cada letra de la `c1` del archivo
     `tbl0.tsv`.
