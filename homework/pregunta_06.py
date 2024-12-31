@@ -4,9 +4,14 @@ datos requeridos se encuentran en los archivos `tbl0.tsv`, `tbl1.tsv` y
 `tbl2.tsv`. En este laboratorio solo puede utilizar las funciones y 
 librerias de pandas para resolver las preguntas.
 """
-
+import pandas as pd
 
 def pregunta_06():
+    #Leer la data
+    df = pd.read_csv('files/input/tbl1.tsv', sep = '\t')
+    #Aplicar los métodos de ordenamiento, convertir a mayúsculas y extraer valores únicos a una serie de pandas de la columna c4
+    upper_c4 = sorted(df['c4'].str.upper().unique())
+    return upper_c4
     """
     Retorne una lista con los valores unicos de la columna `c4` del archivo
     `tbl1.csv` en mayusculas y ordenados alfabéticamente.
